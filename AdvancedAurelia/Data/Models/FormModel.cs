@@ -7,6 +7,8 @@ namespace Data.Models
 {
     public class FormModel
     {
+        public int Id { get; set; }
+
         [Required]
         [StringLength(50, ErrorMessage = "Email neme is required")]
         [DataType(DataType.EmailAddress)]

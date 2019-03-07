@@ -6,6 +6,7 @@ using AutoMapper;
 using Data;
 using Data.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,7 +14,7 @@ namespace PrimerAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [AllowAnonymous]
+    [DisableCors]
     public class FormController : ControllerBase
     {
         private readonly IFormRepository _formRepository;

@@ -10,7 +10,7 @@ namespace Data
     {
         public FormProfile()
         {
-            this.CreateMap<Form, FormModel>();
+            this.CreateMap<Form, FormModel>().ReverseMap();
         }
     }
 }
