@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Data
 {
-    public class Form
+    public class User
     {
         public int Id { get; set; }
 

@@ -6,11 +6,11 @@ using System.Text;
 
 namespace Data
 {
-    public class FormProfile : Profile
+    public class UserProfile : Profile
     {
-        public FormProfile()
+        public UserProfile()
         {
-            this.CreateMap<Form, FormModel>().ReverseMap();
+            this.CreateMap<User, UserModel>().ReverseMap();
         }
     }
 }

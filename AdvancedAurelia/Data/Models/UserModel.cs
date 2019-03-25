@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Data.Models
 {
-    public class FormModel
+    public class UserModel
     {
         public int Id { get; set; }
 
