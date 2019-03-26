@@ -49,16 +49,16 @@ namespace PrimerAPI
             Log.Information("ConfigureServices called.");
 
             services.AddMvcCore()
-                    //.AddAuthorization()
+                    .AddAuthorization()
                     .AddJsonFormatters();
 
-            //services.AddAuthentication("Bearer")
-            //    .AddJwtBearer("Bearer", options =>
-            //    {
-            //        options.Authority = "http://localhost:6000"; //promeniti pre deploya
-            //        options.RequireHttpsMetadata = false;
-            //        options.Audience = "api1";
-            //    });
+            services.AddAuthentication("Bearer")
+                .AddJwtBearer("Bearer", options =>
+                {
+                    options.Authority = "http://www.ids.com"; //promeniti pre deploya
+                    options.RequireHttpsMetadata = false;
+                    options.Audience = "api1";
+                });
 
             services.AddScoped<IUserRepository, UserRepository>();
 
@@ -80,7 +80,7 @@ namespace PrimerAPI
             }
 
             //app.UseHttpsRedirection();
-            //app.UseAuthentication();
+            app.UseAuthentication();
             app.UseMvc();
             //za json
             //ConnectionString = Configuration["ConnectionStrings:DefaultConnection"];

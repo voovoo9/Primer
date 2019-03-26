@@ -15,7 +15,7 @@ using Serilog.Sinks.File;
 namespace PrimerAPI.Controllers
 {
     [Route("api/[controller]")]
-    //[Authorize]
+    [Authorize]
     [ApiController]
     [DisableCors]
     public class UsersController : ControllerBase
